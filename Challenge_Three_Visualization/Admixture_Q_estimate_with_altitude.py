@@ -112,27 +112,40 @@ def perform_clustering_to_order_sample(comb_dataframe, state=26):
 
 
 def plot_admixture_q_matrix(comb_dataframe, out_dir=None):
+    """Plot admixture Q estimates with altitude.
+
+    :param comb_dataframe:  panda dataframe with the samples ordered
+                according to clusters found by the K-mean.
+    :param out_dir: --str, path of an existing directory where to save
+            the plot. Default is the current working directory.
+
+    :return: None. Display plot
+    """
     populations = [col for col in comb_dataframe.columns \
                    if "Population" in col]
 
+    # select the data to be plotted
     q_estimates = comb_dataframe[populations]
     altitude = comb_dataframe[["altitude"]]
 
+    # initialize the figure object
     figure, (axe1, axe2) = plt.subplots(2, sharex=True)
     # figure.suptitle('Q estimates  and altitude ')
 
+    # plot altitude
     plot_alt = altitude.plot(ax=axe1, kind='bar', legend=False, color='red')
-    plot_alt.set_ylabel("Altitude", fontsize=12)
+    plot_alt.set_ylabel("Altitude", fontsize=10)
 
+    # plot Q estimates
     plot_q = q_estimates.plot(stacked=True, kind='bar', ax=axe2)
-    # ax.legend()
     plot_q.legend(loc='upper center', bbox_to_anchor=(0.5, 1.05),
-          ncol=3, fancybox=True, shadow=True)
-    plot_q.set_ylabel("Q estimates", fontsize=12)
-    plot_q.set_xlabel("Samples", fontsize=12)
+          ncol=3, fancybox=True, shadow=True, fontsize=8)
+    plot_q.set_ylabel("Q estimates", fontsize=10)
+    plot_q.set_xlabel("Samples", fontsize=10)
     plot_q.set_xticklabels(comb_dataframe.sample_id, fontsize=8)
     plot_q.set_xticklabels([t if not i % 3 else "" for i, t in enumerate(axe2.get_xticklabels())])
 
+    # check output directory and save file
     if out_dir:
         plt.savefig(f"{out_dir}/Admixture_altitude.png", dpi=800, bbox_inches = 'tight')
     else:
