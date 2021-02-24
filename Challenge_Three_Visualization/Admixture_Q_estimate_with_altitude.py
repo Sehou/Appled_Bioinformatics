@@ -42,7 +42,7 @@ def get_arguments_from_cmd():
 
     parser = argparse.ArgumentParser(description="\
     Script for plotting Q estimates and the altitude at which each sample \
-    was collected for ONLY ONE specie.\n The script raise an error if more \
+    was collected for ONLY ONE specie.\n The script raise an error if \
     invalid options are provided. Please keep in mind that this script \
     assumes that your are passing the data of ONLY ONE specie and"
                                                  "it does not check it.")
