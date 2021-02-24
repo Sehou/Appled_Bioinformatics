@@ -2,7 +2,7 @@
 
 Admixture_Q_estimate_with_altitude is a Python script for plotting and visualizing admixture Q estimates along with the altitude. The output plot of this script gives an idea of the admixture among populations, which should be accounted in the functional diversity study within species.
 
-The script first load both Q file and meta data file. Afterwards, the two data frames are merged and samples (row) containing NAN values are dropped. In the next step, it performs a K-mean clustering with k equal to the number of column in the Q file to separate the sample into k clusters.  Using this cluster assignment, the sample are sort per cluster. The sorted data is finally then plot.
+The script first load both Q file and meta data file. Afterwards, the two data frames are merged and samples (row) containing NAN values are dropped. In the next step, it performs a K-mean clustering with k equal to the number of column in the Q file to separate the sample into k clusters.  Using this cluster assignment, the sample are sort per cluster. The sorted data is finally plotted.
 
 ## Installation
 
