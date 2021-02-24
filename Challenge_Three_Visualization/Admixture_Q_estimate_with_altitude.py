@@ -153,6 +153,7 @@ def plot_admixture_q_matrix(comb_dataframe, out_dir=None):
     plt.show()
 
 
+# main
 if __name__ == '__main__':
     # Taking arguments from command line
     args = get_arguments_from_cmd()
