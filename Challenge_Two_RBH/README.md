@@ -37,7 +37,7 @@ sudo chmod u+x ./RBH_search.sh
 The options -r for the reference and -s for subject, -p for python BLAST XML output to FASTA are mandatory. All the available options can be see by running: 
 
 ```bash
-python Admixture_Q_estimate_with_altitude.py --help
+./RBH_search.sh --help
 ```
 
 
