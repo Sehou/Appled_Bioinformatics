@@ -14,6 +14,8 @@ git clone https://github.com/Sehou/Applied_Bioinformatics.git
 
 ## Usage
 
+To use this script, the following command must be run in a command line.
+
 ```python
 python Admixture_Q_estimate_with_altitude.py <options>
 ```
