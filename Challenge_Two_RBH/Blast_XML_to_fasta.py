@@ -3,7 +3,7 @@
 """
 ============================================================================
 Author: Kouiho, Sehou Romaric
-Last update: Feb 2021
+Last updated: Feb 2021
 email: romarickouiho@gmail.com
 ============================================================================
 
@@ -13,7 +13,7 @@ USAGE: Blast_XML_to_fasta.py <arguments>
 
 ============================================================================
 WARNING!!! This script does not raise any error. Errors are handle if the
-            required inputs are provided on the right formats.
+            required inputs are provided in the right formats.
 ============================================================================
 """
 
@@ -38,11 +38,11 @@ def get_arguments_from_cmd():
     file for each hits.\n")
 
     parser.add_argument("-hit", type=str, required=True,
-                        help="path to the hits file to be parsed")
+                        help="Path to the hits file to be parsed")
     parser.add_argument("-genome", type=str, required=True,
-                        help="path to the input genome")
+                        help="Path to the input genome")
     parser.add_argument("-out", type=str, required=False,
-                        help="output directory")
+                        help="Output directory")
 
     return parser.parse_args()
 
@@ -129,4 +129,3 @@ if __name__ == '__main__':
 
     # Parse BLAST XML file
     parse_query_hits_in_reference(hit_file_record, genome_file, outdir)
-
