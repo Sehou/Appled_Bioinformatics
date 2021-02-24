@@ -31,10 +31,9 @@ DESCRIPTION:
     two genomes or two sets of protein sequences using the BLASTP flavour
             of BLAST. Hence, it only works on protein data.
     
-    Although BLAT, LAST and UBLAST are hundredth to a 25th faster than
-    BLAST. We choose BLAST to avoid the reduction in the number of 
-    homologs and RBHs found by the faster algorithms even if UBLAST
-           produced between 0.6 and 0.8 of the RBHs as BLAST.
+    Although BLAT, LAST and UBLAST are faster than BLAST. We choose BLAST
+    to avoid the reduction in the number of homologs and RBHs found by the
+    faster algorithms even if UBLAST produced most part of the RBHs as BLAST.
     
     This script takes the path to a query and target genomes, a path to
     the python parser for the BLAST XML output and other optional options
